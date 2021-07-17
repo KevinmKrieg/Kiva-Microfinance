@@ -20,17 +20,18 @@ The dataset is a snapshot of all Kiva loan requests, downloaded on 3/15/2021.
 
 ## 3. EDA
 
+* **1:** The data is highly unbalanced, with over 1.8 million instances of successfully funded loan requests, and just over 90,000 expried (unfunded) loan requests. Below is a look at the the highest percentage of unfunded loans in each of variables within the data.
+
 [EDA Notebook](https://github.com/KevinmKrieg/Kiva-Microfinance/blob/1d2b2b34ceadcf891af66a5adb389cf4108cbb32/exploratory_data_analysis.ipynb)
 
-* 
 
 ![k](funding_proportions.png)
 
 ## 4. Feature Engineering
 
-[Features Notebook](feature_engineering.ipynb)
+[Feature Notebook](feature_engineering.ipynb)
 
-I chose to work with the Python [surprise library scikit](http://surpriselib.com/) for training my recommendation system. I tested all four different filtered datasets on the 11 different algorithms provided, and every time the Single Value Decomposition++ (SVD++) algorithm performed the best. It should be noted that this algorithm, although the most accurate is also the most computationally expensive, and that should be taken into account if this were to go into production.
+
 
 ![]()
 
@@ -42,6 +43,6 @@ I chose to work with the Python [surprise library scikit](http://surpriselib.com
 
 ![]()
 
-## 8. Future Improvements
+## 6. Future Improvements
 
-* The biggest challenge for this project was the imbalanced class sizes, future imporvement in data collection could include obtaining more "unfunded" loans, instead of relying on artifical over/under sampling techniques. 
+* The biggest challenge for this project was the imbalanced class sizes, future imporvement in data collection could include obtaining more "unfunded" loans, instead of relying on artifical over/under sampling techniques. Additionally, more information about loan seekers could be collected to improve predictive power, such as the history of the loan seeker (previous loan amounts/time/repayment status etc). Finally, other machine learning methods such as deep learning may be able to more accurately capture the differences between these 2 classes. 
