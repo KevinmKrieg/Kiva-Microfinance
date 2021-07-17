@@ -31,7 +31,9 @@ The dataset is a snapshot of all Kiva loan requests, downloaded on 3/15/2021.
 
 [Feature Notebook](feature_engineering.ipynb)
 
+The OneHotEncoder package was used to make binary dummy variabbles for the top 5 most frequently appearing categories within the secotr, language, currency & country features. Additionally, dummy variabbles were created for the gender of the borrower, the number of people seeking the loan, whether the loan request had a. picture of the borrower included, and the repayment method.
 
+[OneHotEncoder Library](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
 
 ![]()
 
