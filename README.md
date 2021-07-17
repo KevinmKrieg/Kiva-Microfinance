@@ -38,13 +38,13 @@ The OneHotEncoder package was used to make binary dummy variabbles for the top 5
 
 ## 5. Modeling
 
-* **:** Two different algorithm were used to build classifiers for loan funding status.
-*[XGBoost] (https://xgboost.readthedocs.io/en/latest/python/python_api.html)
-*[Random Forest Classifier] (https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+*Two different algorithm were used to build classifiers for loan funding status.
+ *[XGBoost] (https://xgboost.readthedocs.io/en/latest/python/python_api.html)
+ *[Random Forest Classifier] (https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
-* **:** As stated previously, the class sizes here are very unbalanced. Therefore, a variety of techniques were used to try and prevent the model from simply predicting the dominant (funded) class in each prediction.
-*[SMOTE package from imblearn library] (https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
-  * Over & Under sampling
+*As stated previously, the class sizes here are very unbalanced. Therefore, a variety of techniques were used to try and prevent the model from simply predicting the dominant (funded) class in each prediction.
+ *Over & Under sampling with the [SMOTE package from imblearn library] (https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
+ 
 
 
 
