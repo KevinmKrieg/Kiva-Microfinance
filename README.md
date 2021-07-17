@@ -31,14 +31,22 @@ The dataset is a snapshot of all Kiva loan requests, downloaded on 3/15/2021.
 
 [Feature Notebook](feature_engineering.ipynb)
 
-The OneHotEncoder package was used to make binary dummy variabbles for the top 5 most frequently appearing categories within the secotr, language, currency & country features. Additionally, dummy variabbles were created for the gender of the borrower, the number of people seeking the loan, whether the loan request had a. picture of the borrower included, and the repayment method.
+The OneHotEncoder package was used to make binary dummy variabbles for the top 5 most frequently appearing categories within the secotr, language, currency & country features. Additionally, dummy variabbles were created for the gender of the borrower, the number of people seeking the loan, whether the loan request had a. picture of the borrower included, and the repayment method. The resulting data set contains 39 different features, as well as the funding status of each loan.
 
 [OneHotEncoder Library](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
 
-![]()
-
 
 ## 5. Modeling
+
+Two different algorithm were used to build classifiers for loan funding status.
+*[XGBoost] (https://xgboost.readthedocs.io/en/latest/python/python_api.html)
+*[Random Forest Classifier] (https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+
+As stated previously, the class sizes here are very unbalanced. Therefore, a variety of techniques were used to try and prevent the model from simply predicting the dominant (funded) class in each prediction.
+*[SMOTE package from imblearn library] (https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
+  * Over & Under sampling
+
+
 
 [Final Predictions Notebook](modeling.ipynb)
 
