@@ -49,12 +49,14 @@ As stated previously, the class sizes here are very unbalanced. Therefore, a var
 Over & Under sampling with the [SMOTE package from imblearn library](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
  
 
+![k](randomforest_predictions.png)
+
+![k](xgboost_predictions.png)
+
+![k](top_features.png)
 
 
 [Final Predictions Notebook](modeling.ipynb)
-
-
-![]()
 
 ## 6. Future Improvements
 
