@@ -38,23 +38,26 @@ The OneHotEncoder package was used to make binary dummy variabbles for the top 5
 
 ## 5. Modeling
 
-Two different algorithm were used to build classifiers for loan funding status.
-
-[XGBoost](https://xgboost.readthedocs.io/en/latest/python/python_api.html)
-
-[Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-
 As stated previously, the class sizes here are very unbalanced. Therefore, a variety of techniques were used to try and prevent the model from simply predicting the dominant (funded) class in each prediction.
 
 Over & Under sampling with the [SMOTE package from imblearn library](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
  
+ Two different algorithm were used to build classifiers for loan funding status.
 
+
+[Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 ![k](randomforest_predictions.png)
 
+
+XGBoost](https://xgboost.readthedocs.io/en/latest/python/python_api.html)
 ![k](xgboost_predictions.png)
 
+While neither algorithm produced impressive predictive power, after playing around with a few hyperparameters such as the class weights and learning rates, the predictions from the XGBoost model ended up being slightly better then the Random Forest Model.
+
+For model explainability/visualization, the [Shap Package](https://github.com/slundberg/shap) was used. 
 ![k](top_features.png)
 
+We can see here that the amount requested in the loan was the most important feature, cheaper loans being more successfully funded. This intuitively makes sense, as funders browse the Kiva app for potential loans to fund, it may very well be more attractive to completely fund a small loan of $25 or $50 loan, rather than just contributing $25 or $50 to a bigger loan request of hundreds or thounsands of dollars. The 2nd most important feature is also not so surprising, gender. Microfinance is famous for providing funding to female entrepreneurs, who have historically been left out of traditional financial services, especially in developing countries.
 
 [Final Predictions Notebook](modeling.ipynb)
 
