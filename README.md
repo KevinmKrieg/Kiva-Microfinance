@@ -50,7 +50,7 @@ Over & Under sampling with the [SMOTE package from imblearn library](https://imb
 ![k](randomforest_predictions.png)
 
 
-XGBoost](https://xgboost.readthedocs.io/en/latest/python/python_api.html)
+[XGBoost](https://xgboost.readthedocs.io/en/latest/python/python_api.html)
 
 ![k](xgboost_predictions.png)
 
