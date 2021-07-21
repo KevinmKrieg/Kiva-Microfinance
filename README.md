@@ -46,10 +46,12 @@ Over & Under sampling with the [SMOTE package from imblearn library](https://imb
 
 
 [Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+
 ![k](randomforest_predictions.png)
 
 
 XGBoost](https://xgboost.readthedocs.io/en/latest/python/python_api.html)
+
 ![k](xgboost_predictions.png)
 
 While neither algorithm produced impressive predictive power, after playing around with a few hyperparameters such as the class weights and learning rates, the predictions from the XGBoost model ended up being slightly better then the Random Forest Model.
